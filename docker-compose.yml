@@ -26,6 +26,8 @@ services:
       - DOCKER_HOST=tcp://docker:2376
       - DOCKER_CERT_PATH=/certs/client
       - DOCKER_TLS_VERIFY=1
+      - TZ=Asia/Kolkata
+      - JAVA_OPTS=-Duser.timezone=Asia/Kolkata
     volumes:
       - jenkins-data:/var/jenkins_home
       - jenkins-docker-certs:/certs/client:ro
